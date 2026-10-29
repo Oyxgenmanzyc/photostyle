@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover" />
+<meta name="theme-color" content="#f8f3f4">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="x5-fullscreen" content="true">
+<meta name="x5-page-mode" content="app">
+<title>测测你的拍摄系 | 你最适合哪种拍照风格？</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="header">
+    <div class="header-title">测测你的拍摄系</div>
+    <div class="header-sub">你最适合哪种拍照风格？</div>
+  </header>
+
+  <div class="progress-shell hidden" id="progressShell"><div class="progress" id="progress"></div></div>
+
+  <section class="card cover" id="cover">
+    <div class="pill">♡ 25题 · 约3-5分钟</div>
+    <h1>测测你的拍摄系<span>你最适合哪种拍照风格？</span></h1>
+    <p>不是“哪种风格最火”，而是哪一种真的像你。这个测试会结合五官比例、面部气质、性格、妆发偏好、拍摄场景和镜头互动习惯，帮你找到更适合自己的拍照方向。</p>
+    <div class="info-grid">
+      <div class="info">20 道单选题<br>判断稳定审美、面部特征和镜头习惯。</div>
+      <div class="info">5 道多选题<br>补充妆容、场地、动作与真实拍摄需求。</div>
+    </div>
+    <div class="note">没有标准答案。按“最像平时的自己”来选，比按“理想中的自己”更容易测准。</div>
+    <button class="primary" id="startBtn">开始测试</button>
+  </section>
+
+  <section class="card quiz hidden" id="quiz">
+    <div class="qtop">
+      <div class="qcount" id="qcount"></div>
+      <div class="qtype" id="qtype"></div>
+    </div>
+    <h2 class="qtitle" id="qtitle"></h2>
+    <p class="qhelp" id="qhelp"></p>
+    <div class="options" id="options"></div>
+    <div class="multi-tip" id="multiTip">这是一道多选题，可以选择多个答案；至少选 1 项后再继续。</div>
+    <div class="quiz-actions"><button class="secondary" id="backBtn">返回上一题</button><button class="primary" id="nextBtn" disabled>下一题</button></div>
+  </section>
+
+  <section class="card result hidden" id="result">
+    <div class="result-head">
+      <div class="overline">YOUR PHOTO PERSONALITY</div>
+      <div class="persona" id="persona"></div>
+      <h2 class="result-name" id="resultName"></h2>
+      <div class="tags" id="tags"></div>
+    </div>
+    <div class="hero"><div class="quote" id="quote"></div></div>
+    <div class="section"><h3 class="section-title">你的拍照人格</h3><p id="intro"></p></div>
+    <div class="section"><h3 class="section-title">最适合你的拍法</h3><p id="advice"></p></div>
+    <div class="section"><h3 class="section-title">推荐时间 & 地点</h3><p id="place"></p></div>
+    <div class="section"><h3 class="section-title">穿搭 & 妆发</h3><p id="wear"></p></div>
+    <div class="actions">
+      <button class="primary" id="endBtn">结束测试</button>
+      <button class="secondary" id="restartBtn">重新测试</button>
+    </div>
+    <div class="small">适合截图保存｜结果是拍摄方向参考，不是给你贴标签。</div>
+  </section>
+
+  <section class="final-screen hidden" id="finalScreen">
+    <div class="final-inner">
+      <div class="final-orb"></div>
+      <div class="final-kicker">FOR YOUR FUTURE SELF</div>
+      <h2 class="final-message">你很漂亮，拍下的那一瞬间是留给未来的一秒喜悦</h2>
+      <p class="final-sub">不用等到最完美的状态才值得被记录。现在的你，就已经是以后会怀念的样子。</p>
+      <button class="secondary" id="finalRestartBtn">再测一次</button>
+    </div>
+  </section>
+</div>
+<script src="styles-data.js"></script>
+<script src="questions-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
